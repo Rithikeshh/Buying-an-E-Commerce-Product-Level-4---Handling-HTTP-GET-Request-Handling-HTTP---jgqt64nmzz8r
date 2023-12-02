@@ -29,7 +29,7 @@ app.patch('/api/v1/products/:id', (req, res) => {
                 (err)=>{
                     res.status(200).send({
                         "status": "success",
-                        "message": `Thank you for purchasing Product ${searchedProduct.name}`,
+                        "message": `Thank you for purchasing ${searchedProduct.name}`,
                         "product": products[index]
                     })
                 }
