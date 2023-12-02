@@ -29,7 +29,7 @@ app.patch('/api/v1/products/:id', (req, res) => {
                 (err)=>{
                     res.status(200).send({
                         "status": "success",
-                        "message": `Thank you for purchasing Product ${id}`,
+                        "message": `Thank you for purchasing Product ${searchedProduct.name}`,
                         "product": products[index]
                     })
                 }
@@ -38,7 +38,7 @@ app.patch('/api/v1/products/:id', (req, res) => {
         else{
             res.status(404).send({
                 "status": "success",
-                "message": `Product ${id}, Out of stock!`
+                "message": "Impact , Out of stock!"
             })
         }
     } 
